@@ -48,6 +48,7 @@ while True:
         if check in items_dict:
             print(f"{check}의 재고는 {items_dict[check]}개 입니다.")
 
+
     elif num==2:
         plus_item,plus_counts=input("추가하려는 물건의 이름과 수를 입력하세요: ").split()
         plus_counts=int(plus_counts)
