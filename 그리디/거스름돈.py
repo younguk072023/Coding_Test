@@ -21,7 +21,7 @@ sum=change1+change2+change3+change4
 
 print(sum)
 
-# 해설 답
+# 해설 답, 코드 간결
 
 n=1260
 count=0
