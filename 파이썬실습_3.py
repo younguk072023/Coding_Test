@@ -10,29 +10,25 @@ text=f.read()
 f.close()
 
 table_list=text.strip().split("\n")
-data=[table_data.strip().split(",") for table_data in table_list[1:]]
+data=[list.strip().split(",") for list in table_list[1:]]
+
+all_list=[]
 
 header=table_list[0].strip().split(",")
 fat_index=header.index("비만율")
 
-fat_list=[]
 
 for row in data:
-    row_value=float(row[fat_index])
-    fat_list.append(row_value)
+    value=float(row[fat_index])
+    all_list.append(value)
 
-fat_list_numpy=np.array(fat_list)
+all_list_numpy=np.array(all_list)
 
+result=all_list_numpy>=25
 
-result=fat_list_numpy>=25   #numpy 조건문은 if 생략 가능
-
-
-fat_list_numpy_result=fat_list_numpy[result]
-
-
-print(fat_list_numpy)
-print(type(fat_list_numpy))
 print(result)
-print(fat_list_numpy_result)
+print(all_list_numpy[result])
+
+
 
 
