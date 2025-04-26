@@ -24,6 +24,24 @@ while N>1:
     count+=1
 
 print(count)
+
+#방법 2
+
+n,k= map(int,input().split())
+result =0
+
+while True:
+    target = (n//k)*k
+    result+=(n-target)
+    n=target
+    
+    if n<k:
+        break
+    result+=1
+    n//=K
+
+result+=(n-1)   #마지막으로 남은 수에 대하여 1씩 빼기 위한 n-1을 더해줘야함함
+print(result)
     
 
 
