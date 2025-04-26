@@ -10,24 +10,22 @@
 
 N,K=map(int,input().split())
 
+count=0
 
-count=0 #계산한 총 개수
-
-while  N>=K:
-    
-    if N%K!=0:
+while N>=K:
+    while N%K!=0:
         N-=1
         count+=1
     N//=K
     count+=1
-    
-while N>1:  #나누는 몫보다는 작고 1보다는 클때의 예를 생각해서
+
+while N>1:
     N-=1
     count+=1
-      
-        
 
 print(count)
+    
+
 
 
     
