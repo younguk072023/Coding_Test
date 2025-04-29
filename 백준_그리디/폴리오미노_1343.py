@@ -2,29 +2,29 @@
 백준 폴리오미노 1343번 문제
 '''
 
-# a=str(input())
+a=str(input())
 
-# part=a.split('.')
+part=a.split('.')
 
-# result=[]
+result=[]
 
-# for i in part:
+for i in part:
 
-#     temp=''
+    temp=''
 
-#     if len(i)%2!=0:
-#         print(-1)
-#         exit()
+    if len(i)%2!=0:
+        print(-1)
+        exit()
     
-#     while len(i)>=4:
-#         temp+="AAAA"
-#         i=i[4:]
-#     while len(i)>=2:
-#         temp+="BB"
-#         i=i[2:]
-#     result.append(temp)
+    while len(i)>=4:
+        temp+="AAAA"
+        i=i[4:]
+    while len(i)>=2:
+        temp+="BB"
+        i=i[2:]
+    result.append(temp)
 
-# print('.'.join(result))
+print('.'.join(result))
 
 
 # join함수 문법
@@ -36,6 +36,12 @@ ex) reuslt=["BB","AAAA","AAAABB"]
 '''
 
 
+# 틀린 문제 한번 더 구현 
+'''
+최종 출력해줄 리스트 result의 변수를 만들고 append로 temp를 넣어주어야함.
+for문안에 temp=''를 초기화해줘야함
+만약 밖에있을경우 첫번째 리스트에서의 temp값을 가지고 두번째에도 붙혀서 결과가 나옴 주의!!
+'''
 a=str(input())
 
 part=a.split('.')
